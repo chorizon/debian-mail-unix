@@ -1,0 +1,22 @@
+#!/usr/bin/python3 -u
+
+from time import sleep
+import argparse
+
+parser = argparse.ArgumentParser(description='A simple script for add a new domain to postfix')
+
+parser.add_argument('--domain', help='The domain to create', required=True)
+
+args = parser.parse_args()
+
+print('{"PROGRESS": 0, "MESSAGE": "Beggining process...", "ERROR":0}')
+
+sleep(5)
+
+print('{"PROGRESS": 50, "MESSAGE": "Adding new email", "ERROR":0}')
+
+sleep(5)
+
+print('{"PROGRESS": 100, "MESSAGE": "Successful!!!", "ERROR":0}')
+
+

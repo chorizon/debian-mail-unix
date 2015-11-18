@@ -6,7 +6,11 @@ import pwd
 import re
 import os
 import shutil
+import sys
 
+from chorizon.basic import check_domain, add_line, add_user, set_quota_grp, obtain_mountpoint_file 
+
+"""
 def check_domain(domain):
     
     pattern='[a-zA-Z\d-]{,63}(\.[a-zA-Z\d-]{,63})*'
@@ -102,16 +106,12 @@ def obtain_mountpoint_file(file_path):
 
     df = subprocess.Popen(["df", file_path], stdout=subprocess.PIPE)
     output = df.communicate()[0]
-    """
-    for line in df.stdout:
-        pass
-    print(line.decode('utf-8'))
-    exit(0)
-    """
     
     device, size, used, available, percent, mountpoint = output.decode('utf-8').split("\n")[1].split()
     
     return  mountpoint
+
+"""
 
 parser = argparse.ArgumentParser(description='A simple script for add an new domain and user')
 
